@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.digischool.digischool">
+
+    <!--<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission-sdk-23 android:name="android.permission.CAMERA" />
+    <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/jiinue"
+        android:label="Jiinue Groups"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"></meta-data>
+        </provider>
+
+        <activity android:name=".MainActivity" />
+        <activity android:name=".AllExamsActivity" />
+        <activity android:name=".LoginActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ParentsLoginActivity" android:label="Jiinue Group Leaders Login" />
+        <activity android:name=".GovLoginActivity" android:label="Ministry of Education Login" />
+        <activity android:name=".SchoolsActivity" android:label=" Group Services"/>
+        <activity android:name=".reports.TopTenActivity" android:label=" Best 10 Jiinue Members in a Group"/>
+        <activity android:name=".reports.BottomTenActivity" android:label=" Last 10 Jiinue Members in a Group"/>
+        <activity android:name=".reports.AllPerClassActivity" android:label=" All Members in a Group"/>
+        <activity android:name=".reports.MeanScoresActivity" android:label=" Regional Groups Rating"/>
+        <activity android:name=".reports.TotalPerStreamActivity" android:label=" Total Members in a Group"/>
+        <activity android:name=".reports.TotalsPerClassActivity" android:label=" Total Members in Regional GRoups" />
+        <activity android:name=".AttendanceActivity" android:label=" Jiinue Members Sessions Attendance" />
+        <activity android:name=".StreamsActivity" android:label=" Enter all the Streams in School" />
+        <activity android:name=".BatchMarksActivity" android:label=" Enter Marks and upload to Server" />
+        <activity android:name=".CabinetsecretaryreportsActivity" />
+        <activity android:name=".ClassteacherloginActivity" android:label=" Class Teacher Login" />
+        <activity android:name=".ClassteachersreportsActivity" android:label=" Class Teacher Reports"/>
+        <activity android:name=".CountyreportsActivity" />
+        <activity android:name=".DeanReports" android:label=" Group Leaders Reports"/>
+        <activity android:name=".GovReportsActivity" android:label=" Ministry of Education Reports"/>
+        <activity android:name=".MOEreports"  android:label=" Ministry of Education Reports"/>
+        <activity android:name=".SubcountyReportsActivity" />
+        <activity android:name=".ParentsreportsActivity"  android:label=" Parents Reports"/>
+        <activity android:name=".PrincipalsReportActivity"  android:label=" School Principal Reports"/>
+        <activity android:name=".ReportsActivity"  android:label=" User Level Reports"/>
+        <activity android:name=".SchoolLevelReportsActivity"  android:label=" Reports at School Level"/>
+        <activity android:name=".StudentMarksActivity"  android:label=" Pull Students Marks from Server"/>
+        <activity android:name=".SubjectNameActivity"  android:label=" Enter Subjects Done in Your Institution"/>
+        <activity android:name=".SchoolTotalActivity"  android:label=" Total Students in School"/>
+        <activity android:name=".EnrollmentActivity"  android:label=" Capture New Students Biodata"/>
+
+        <activity
+            android:name=".TotalSchoolsPerCountyActivity"
+            android:label="Schools Totals" />
+        <activity
+            android:name=".TotalStudentsPerCountyActivity"
+            android:label="Students Totals" />
+        
+        <activity android:name=".GradingActivity"
+            android:label="Grading System"></activity>
+
+    </application>
+
+</manifest>
